@@ -6,7 +6,11 @@
     <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?
+    family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900
+    &family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900
+    &display=swap" rel="stylesheet">
     <title>Title </title>
 
 
@@ -19,7 +23,7 @@
         }
 
         body {
-            font-family: 'Inter', 'sans';
+            font-family: 'Inter', 'Roboto', sans-serif;
             margin: 0;
             box-sizing: border-box;
             font-size: 14px;
@@ -154,7 +158,7 @@
         </div>
     </div>
 
-
+    <!-- List of Table -->
     <table style="width: 100%; border-collapse: collapse; border: none;">
         <tr>
             <!-- Left Column -->
@@ -631,9 +635,10 @@
         </tr>
     </table>
 
+    <!-- Note -->
     <div style="width: 50%; font-size: 14px;">
 
-        <p>Note: If tyre is less than 3mm then should be changed. Check for<br />
+        <p style="font-size: 12px;">Note: If tyre is less than 3mm then should be changed. Check for
             any cracks in the tyres, and if any shoulder wear, slits, cuts.</p>
 
         <table style="width: 100%;">
@@ -684,22 +689,230 @@
             </tr>
         </table>
 
+        <!-- Miscellaneous -->
+        <p style="font-size: 14px; margin-top: 30px;">Miscellaneous notes:</p>
 
-        <p style="font-size: 14px;">Miscellaneous notes:</p>
-
-        <hr style="margin-top: 10px;">
-        <hr style="margin: 20px 0;">
-        <hr>
-        <hr style="margin-top: 20px;">
+        <hr style="margin: 30px 0 20px; color: #999;">
+        <hr style="color: #999;">
+        <hr style="margin: 20px 0; color: #999;">
+        <hr style="margin-top: 20px; color: #999;">
     </div>
 
+    <!-- Condition -->
+    <div style="width: 100%; text-align: center; margin-top:35px">
 
-    <div style="width: 100%; text-align: center; margin-top:15px">
-
-        <h2 style="font-size: 16px; line-height: 10px;">CONDITION OF VEHICLE</h2>
-        <P style="font-weight: 600; line-height: 5px;">Indicate any damage to the vehicle in the space provided using your own words or the following legend. <span>if None write None</span></P>
+        <h2 style="font-size: 14px; line-height: 10px;">CONDITION OF VEHICLE</h2>
+        <P style="line-height: 5px; font-size: 12px; font-weight: bold;">Indicate any damage to the vehicle in the space provided using your own words or the following legend. <span style="text-decoration: underline;">if None write None</span></P>
 
     </div>
+
+    <!-- Condition Table -->
+    <table style="width: 100%; padding: 0 25px; border-collapse: collapse; font-size: 12px; color: black;">
+        <tr>
+            <td style="border: none;">Bent - B</td>
+            <td style="border: none;">Broken - BR</td>
+            <td style="border: none;">Chip - CH</td>
+            <td style="border: none;">Cracked - CR</td>
+            <td style="border: none;">Dented - D</td>
+            <td style="border: none;">Missing - M</td>
+            <td style="border: none;"></td>
+        </tr>
+        <tr>
+            <td style="border: none;">Pitted - PT</td>
+            <td style="border: none;">Rusty - R</td>
+            <td style="border: none;">Rubbed - RU</td>
+            <td style="border: none;">Scratch - S</td>
+            <td style="border: none;">Heirline Scratch - HS</td>
+            <td style="border: none;">Stained - ST</td>
+            <td style="border: none;">Torn - T</td>
+        </tr>
+    </table>
+
+    <!-- Car Table -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px;  margin-top: 10px;">
+        <tr>
+            <td style="width: 50%; padding: 0;">
+                <table style="width: 100%; border-collapse: collapse; border: none;">
+                    <tr>
+                        <!-- IMAGE -->
+                        <td style="width: 60%; vertical-align: middle; text-align: center; border: none;">
+                            <img src="{{ public_path('logo.jpg') }}" width="250">
+                        </td>
+
+                        <!-- INNER TABLE -->
+                        <td style="width: 40%; vertical-align: top; border: none;">
+                            <table style="width: 100%; border-collapse: collapse; border: none;">
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px; border-top: none; border-right: none;">1.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">2.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">3.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">4.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">5.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 30px 10px; border: none;"></td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+
+            <td style="width: 50%; padding: 0;">
+                <table style="width: 100%; border-collapse: collapse; border: none;">
+                    <tr>
+                        <!-- IMAGE -->
+                        <td style="width: 60%; vertical-align: middle; text-align: center; border: none;">
+                            <img src="{{ public_path('logo.jpg') }}" width="250">
+                        </td>
+
+                        <!-- INNER TABLE -->
+                        <td style="width: 40%; vertical-align: top; border: none;">
+                            <table style="width: 100%; border-collapse: collapse; border: none;">
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px; border-top: none; border-right: none;">6.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">7.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">8.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">9.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 10px 10px;  border-top: none; border-right: none;">10.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0 0 30px 10px; border: none;"></td>
+                                </tr>
+                            </table>
+                        </td>
+
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 50%; height: 150px;">
+                <img src="{{ public_path('logo.jpg') }}" width="370" style="transform: scaleX(-1); display: block; margin-bottom: 10px;">
+                <table style="border-collapse: collapse; width: 100%;">
+                    <tr>
+                        <td style="padding: 0 0 15px 15px; border-left: none;">11.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none;">12.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-right: none;">13.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none;">14.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none;">15.</td>
+                        <td style="padding: 0 0 15px 15px; border-bottom: none; border-right: none;">16.</td>
+                    </tr>
+                </table>
+            </td>
+
+            <td style="width: 50%; height: 150px;">
+                <img src="{{ public_path('logo.jpg') }}" width="370" style="display: block; margin-bottom: 10px;">
+                <table style="border-collapse: collapse; width: 100%;">
+                    <tr>
+                        <td style="padding: 0 0 15px 15px; border-left: none;">17.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none;">18.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none; border-right: none;">19.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none;">20.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none;">21.</td>
+                        <td style="padding: 0 0 15px 15px; border-left: none; border-bottom: none; border-right: none;">22.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+
+    <div style="width: 100%; display: table; border-collapse: collapse; border: none; padding: 0 20px; margin-top: 20px;">
+
+        <div style="display: table-cell; width: 40%; padding-right: 10px;">
+            <h3 style="font-size: 12px; text-align: center; line-height: 5px;">Interior</h3>
+
+            <p style="text-decoration: underline; font-size: 12px;">Worn - W Born - B Ripped - R Stain - S Cracked - C</p>
+
+            <div style="width: 100%; display: flex; align-items: center;">
+                <p style="margin: 0; font-size: 12px;">Front Carpet</p>
+                <hr style="flex: 1; margin: 0 0 0 70px; border: 0; border-top: 1px solid black;">
+            </div>
+            <div style="width: 100%; display: flex; align-items: center;">
+                <p style="margin: 0; font-size: 12px;">Rear Carpet</p>
+                <hr style="flex: 1; margin: 0 0 0 70px; border: 0; border-top: 1px solid black;">
+            </div>
+            <div style="width: 100%; display: flex; align-items: center;">
+                <p style="margin: 0; font-size: 12px;">Front Seat</p>
+                <hr style="flex: 1; margin: 0 0 0 60px; border: 0; border-top: 1px solid black;">
+            </div>
+            <div style="width: 100%; display: flex; align-items: center;">
+                <p style="margin: 0; font-size: 12px;">Rear Seat</p>
+                <hr style="flex: 1; margin: 0 0 0 58px; border: 0; border-top: 1px solid black;">
+            </div>
+            <div style="width: 100%; display: flex; align-items: center;">
+                <p style="margin: 0; font-size: 12px;">Headliner</p>
+                <hr style="flex: 1; margin: 0 0 0 53px; border: 0; border-top: 1px solid black;">
+            </div>
+            <div style="width: 100%; display: flex; align-items: center;">
+                <p style="margin: 0; font-size: 12px;">Door Panels</p>
+                <hr style="flex: 1; margin: 0 0 0 70px; border: 0; border-top: 1px solid black;">
+            </div>
+
+        </div>
+
+        <!-- Function & Tires -->
+        <div style="display: table-cell; width: 60%; padding-left: 40px;">
+            <h3 style="font-size: 12px; text-align: center; line-height: 5px;">Function & Tires</h3>
+            <p style="font-size: 12px; width: 100%; color: gray; margin: 0; padding: 0; margin-left: 20px;">
+                <span style="display: inline-block; width: 48%;">
+                    Operational: <span style="margin-left: 10px;">Yes</span> <span style="margin-left: 10px;">No</span>
+                </span>
+                <span style="display: inline-block; width: 48%; text-align: end;">
+                    Difficulty starting: <span style="margin-left: 10px;">Yes</span> <span style="margin-left: 10px;">No</span>
+                </span>
+            </p>
+            <table style="width: 100%; border-collapse: collapse; margin: 0; padding: 0;">
+                <tr>
+                    <th style="padding: 0 10px 20px 10px; font-size: 12px; font-weight: normal; background-color: #e0e0e0;">Tires & Rims.</th>
+                    <th style="padding: 0 10px 20px 10px; font-size: 12px; font-weight: normal; background-color: #e0e0e0;">Front R</th>
+                    <th style="padding: 0 10px 20px 10px; font-size: 12px; font-weight: normal; background-color: #e0e0e0;">Front L</th>
+                    <th style="padding: 0 10px 20px 10px; font-size: 12px; font-weight: normal; background-color: #e0e0e0;">Rear R</th>
+                    <th style="padding: 0 10px 20px 10px; font-size: 12px; font-weight: normal; background-color: #e0e0e0;">Rear L</th>
+                    <th style="padding: 0 10px 20px 10px; font-size: 12px; font-weight: normal; background-color: #e0e0e0;">Spare</th>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px;">
+                        S - scratched <br />
+                        D - dented <br />
+                        W - worn C - cut<br />
+                        R - rubbed
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
 
 </body>
 
