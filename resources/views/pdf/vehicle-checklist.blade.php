@@ -83,6 +83,7 @@
 
         .legend-box {
             display: inline-block;
+            font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
             width: 16px;
             height: 16px;
             border: 1px solid gray;
@@ -144,12 +145,12 @@
 
         <div class="legend-item">
             <span style="text-decoration: underline;">Checked and OK:</span>
-            <span class="legend-box">&#10003;</span> <!-- check mark -->
+            <span class="legend-box">&#x2714;</span> <!-- check mark -->
         </div>
 
         <div class="legend-item">
             <span style="text-decoration: underline;">Requires Attention:</span>
-            <span class="legend-box">&#9888;</span> <!-- warning -->
+            <span class="legend-box">&#10008;</span>
         </div>
 
         <div class="legend-item">
