@@ -645,21 +645,13 @@
         <table style="width: 100%;">
             <tr>
                 <th style="width: 10%;"></th>
-                <th style="font-weight: normal; width: 30%; text-align: left; padding-left: 10px;">Brand</th>
-                <th style="font-weight: normal;">Run flat</th>
-                <th style="font-weight: normal;">Craks</th>
-                <th style="font-weight: normal;">Shoulder Wear</th>
+                <th style="font-weight: normal; font-size: 12px; width: 40%; text-align: left; padding-left: 10px;">Brand</th>
+                <th style="font-weight: normal; font-size: 12px;">Run flat</th>
+                <th style="font-weight: normal; font-size: 12px;">Craks</th>
+                <th style="font-weight: normal; font-size: 12px;">Shoulder Wear</th>
             </tr>
             <tr>
-                <td style="padding: 2px 4px;">N/S/F</td>
-                <td style="padding: 2px 4px;"></td>
-                <td style="padding: 2px 4px;"></td>
-                <td style="padding: 2px 4px;"></td>
-                <td style="padding: 2px 4px;"></td>
-            </tr>
-            <tr>
-
-                <td style="padding: 2px 4px;">O/S/F</td>
+                <td style="padding: 2px 4px; font-size: 12px;">N/S/F</td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
@@ -667,7 +659,15 @@
             </tr>
             <tr>
 
-                <td style="padding: 2px 4px;">N/S/R</td>
+                <td style="padding: 2px 4px; font-size: 12px;">O/S/F</td>
+                <td style="padding: 2px 4px;"></td>
+                <td style="padding: 2px 4px;"></td>
+                <td style="padding: 2px 4px;"></td>
+                <td style="padding: 2px 4px;"></td>
+            </tr>
+            <tr>
+
+                <td style="padding: 2px 4px; font-size: 12px;">N/S/R</td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
@@ -675,14 +675,14 @@
             </tr>
 
             <tr>
-                <td style="padding: 2px 4px;">O/S/R</td>
+                <td style="padding: 2px 4px; font-size: 12px;">O/S/R</td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
             </tr>
             <tr>
-                <td style="padding: 2px 4px;">Spare</td>
+                <td style="padding: 2px 4px; font-size: 12px;">Spare</td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
                 <td style="padding: 2px 4px;"></td>
