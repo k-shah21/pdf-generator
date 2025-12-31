@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/vehicle-checklist-pdf', [PdfController::class, 'generate']);
+Route::get('/black-stone', [PdfController::class, 'blackstonepdf']);

@@ -7,9 +7,17 @@
     <title>/vehicle-checklist-pdf</title>
 </head>
 
-<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
 
+<body>
     <h1>Visit /vehicle-checklist-pdf</h1>
+    <h1>Visit /black-stone</h1>
 </body>
 
 </html>
