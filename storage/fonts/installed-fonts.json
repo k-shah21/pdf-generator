@@ -1,0 +1,10 @@
+{
+    "inter": {
+        "normal": "C:\\Khubaib\\www\\pdf-generator\\storage\\fonts\/inter_normal_4f4d9e250888e43afa3481bb1f1ebe11",
+        "bold": "inter_bold_493cf4c16bcf1cb38752670e5ef23a81"
+    },
+    "roboto": {
+        "normal": "C:\\Khubaib\\www\\pdf-generator\\storage\\fonts\/roboto_normal_a9396847409b4086a0d082cf5b02f4d0",
+        "bold": "roboto_bold_76b7c08df8c3e54f0570150a17de0a25"
+    }
+}

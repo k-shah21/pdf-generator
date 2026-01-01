@@ -17,7 +17,8 @@
 
 <body>
     <h1>Visit /vehicle-checklist-pdf</h1>
-    <h1>Visit /black-stone</h1>
+    <h1>Visit /black-stone (Letter Version)</h1>
+    <h1>Visit /black-stone-a4 (A4 Version)</h1>
 </body>
 
 </html>
