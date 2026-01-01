@@ -28,8 +28,8 @@ class PdfController extends Controller
                     [
                         'type' => 'bar',
                         'label' => 'Cumulative Profit (£)',
-                        'data' => [57407, 70858, 99866, 111642],
-                        'backgroundColor' => '#ed7d31',
+                        'data' => [90000, 100000, 110000, 120000],
+                        'backgroundColor' => '#FF0000',
                         'yAxisID' => 'y',
                         'stack' => 'portfolio',
                         'categoryPercentage' => 0.6,
@@ -49,8 +49,8 @@ class PdfController extends Controller
                         'type' => 'line',
                         'label' => 'Cumulative ROI (%)',
                         'data' => [9.21, 10.41, 12.72, 13.72],
-                        'borderColor' => '#70ad47',
-                        'backgroundColor' => '#70ad47',
+                        'borderColor' => '#FF0000',
+                        'backgroundColor' => '#FF0000',
                         'pointRadius' => 4,
                         'borderWidth' => 2,
                         'fill' => false,
@@ -58,7 +58,7 @@ class PdfController extends Controller
                         'tension' => 0.3,
                         'datalabels' => [
                             'display' => true,
-                            'backgroundColor' => '#9bc574',
+                            'backgroundColor' => '#e2e2e2',
                             'color' => 'black',
                             'borderRadius' => 4,
                             'padding' => 4,
@@ -68,8 +68,8 @@ class PdfController extends Controller
                     [
                         'type' => 'bar',
                         'label' => 'Closing Portfolio Value (£)',
-                        'data' => [680651, 694102, 814350, 825771],
-                        'backgroundColor' => '#4472c4',
+                        'data' => [400030, 600030, 800030, 825771],
+                        'backgroundColor' => '#9CA3AF',
                         'yAxisID' => 'y',
                         'stack' => 'portfolio',
                         'categoryPercentage' => 0.6,
@@ -125,55 +125,73 @@ class PdfController extends Controller
             'data' => [
                 'labels' => ['H2-FY24', 'H1-FY25', 'H2-FY25', 'H1-FY26 - Partial'],
                 'datasets' => [
+
+                    // 🔵 Closing Portfolio Value (BOTTOM)
                     [
                         'type' => 'bar',
                         'label' => 'Closing Portfolio Value (£)',
-                        'data' => [680651, 694102, 814350, 825771],
-                        'backgroundColor' => '#4472c4',
+                        'data' => [400030, 600030, 800030, 825771],
+                        'backgroundColor' => '#9ca3af', // grey
+                        'stack' => 'stack1',
                         'yAxisID' => 'y',
-                        'order' => 10,
-                        'padding' => 10,
-                        'stack' => 'portfolio',
-                        'categoryPercentage' => 0.5,
-                        'barPercentage' => 0.5,
-                        'datalabels' => ['display' => true, 'backgroundColor' => 'whitesmoke', 'borderColor' => '#ccc', 'anchor' => 'center', 'align' => 'center', 'color' => 'black', 'font' => ['weight' => 'normal'], 'formatter' => "function(val){return val.toLocaleString();}"]
+                        'barPercentage' => 0.55,
+                        'categoryPercentage' => 0.6,
+                        'datalabels' => [
+                            'display' => true,
+                            'color' => '#000',
+                            'anchor' => 'end',
+                            'align' => 'bottom',
+                            'backgroundColor' => '#f3f4f6',
+                            'borderRadius' => 3,
+                            'padding' => 4,
+                            'formatter' => '{value}',
+                        ],
                     ],
+
+                    // 🔴 Cumulative Profit (TOP)
                     [
                         'type' => 'bar',
                         'label' => 'Cumulative Profit (£)',
-                        'data' => [57407, 70858, 99866, 111642],
-                        'backgroundColor' => '#ed7d31',
+                        'data' => [90000, 100000, 110000, 120000],
+                        'backgroundColor' => '#dc2626',
+                        'stack' => 'stack1',
                         'yAxisID' => 'y',
-                        'order' => 10,
-                        'stack' => 'portfolio',
-                        'categoryPercentage' => 0.5,
-                        'barPercentage' => 0.5,
-                        'datalabels' => ['display' => false]
+                        'barPercentage' => 0.55,
+                        'categoryPercentage' => 0.6,
+                        'datalabels' => [
+                            'display' => true,
+                            'color' => '#000',
+                            'anchor' => 'end',
+                            'align' => 'top',
+                            'formatter' => '{value}',
+                        ],
                     ],
+
+                    // 🟢 ROI LINE
                     [
                         'type' => 'line',
                         'label' => 'Cumulative ROI (%)',
                         'data' => [9.21, 10.41, 12.72, 13.72],
-                        'borderColor' => '#70ad47',
-                        'backgroundColor' => '#70ad47',
+                        'borderColor' => '#9acd32',
+                        'backgroundColor' => '#9acd32',
                         'pointRadius' => 4,
-                        'borderWidth' => 2,
+                        'borderWidth' => 3,
                         'fill' => false,
                         'yAxisID' => 'y1',
-                        'order' => 1,
+                        'tension' => 0.3,
                         'datalabels' => [
                             'display' => true,
-                            'align' => 'right',
-                            'anchor' => 'center',
-                            'offset' => 10,
-                            'backgroundColor' => '#c5e0b4',
-                            'color' => 'black',
+                            'backgroundColor' => '#c7e59f',
+                            'color' => '#000',
                             'borderRadius' => 4,
                             'padding' => 4,
-                            'formatter' => "function(val){return val.toFixed(2) + '%';}"
+                            'anchor' => 'center',
+                            'align' => 'top',
+                            'formatter' => '{value}%',
                         ],
                     ],
-                ]
+                ],
+
             ],
             'options' => [
                 'plugins' => [
@@ -182,7 +200,8 @@ class PdfController extends Controller
                 ],
                 'scales' => [
                     'x' => [
-                        'stacked' => true
+                        'stacked' => true,
+                        'offset' => true,
                     ],
                     'y' => [
                         'stacked' => true,
@@ -192,12 +211,21 @@ class PdfController extends Controller
                     ],
                     'y1' => [
                         'position' => 'right',
-                        'title' => ['display' => false],
-                        'grid' => ['drawOnChartArea' => false],
+                        'min' => 0,
+                        'max' => 16,
+                        'grid' => [
+                            'drawOnChartArea' => false,
+                        ],
                         'ticks' => [
-                            'callback' => "function(val){return val.toFixed(2) + '%';}"
-                        ]
-                    ]
+                            'stepSize' => 2,
+                            'format' => [
+                                'style' => 'percent',
+                                'minimumFractionDigits' => 0,
+                                'maximumFractionDigits' => 0,
+                            ],
+                        ],
+
+                    ],
                 ]
             ]
         ];
@@ -210,62 +238,38 @@ class PdfController extends Controller
                 'datasets' => [
                     [
                         'data' => [86.28, 13.72],
-                        'backgroundColor' => ['#ffffff', '#4472c4'], // Outer ring: White for investment?, Blue for gain. Wait, mockup: "Net Investment" is white/light, "Gain" is blue.
-                        'borderColor' => '#4472c4',
+                        'backgroundColor' => ['#9CA3AF', '#FF0000'],
+                        'borderColor' => '#FF0000',
                         'borderWidth' => 1
                     ]
                 ]
             ],
             'options' => [
-                'cutout' => '60%',
+                'rotation' => -0.7, // Radians for v2 (-40 degrees)
+                'cutoutPercentage' => 55,
+                'legend' => ['display' => true],
                 'plugins' => [
-                    'legend' => ['display' => false],
-                    'datalabels' => [
-                        'display' => true,
-                        'color' => '#000',
-                        'anchor' => 'end',
-                        'align' => 'end',
-                        'offset' => 10,
-                        'font' => ['weight' => 'bold'],
-                        'formatter' => "function(val, ctx){ return ctx.chart.data.labels[ctx.dataIndex] + '\\n' + val + '%'; }"
+                    'outlabels' => [
+                        'text' => "%l\n%p",
+                        'color' => 'black',
+                        'stretch' => 20,
+                        'font' => ['resizable' => true, 'minSize' => 12, 'maxSize' => 14],
+                        'backgroundColor' => null,
+                        'lineWidth' => 2,
                     ],
                     'doughnutlabel' => [
                         'labels' => [
-                            ['text' => '£ 825,771', 'font' => ['size' => 14, 'weight' => 'bold'], 'color' => 'white', 'background' => ['color' => '#4472c4']] // Simplified center text approach
+                            ['text' => '  £ 825,771  ', 'font' => ['size' => 16, 'weight' => 'bold'], 'color' => 'black', 'background' => ['color' => '#FF0000', 'borderRadius' => 4]]
                         ]
                     ]
+                ],
+                'layout' => [
+                    'padding' => 40
                 ]
             ]
         ];
 
-        $chart2 = [
-            'type' => 'doughnut',
-            'data' => [
-                'labels' => ['Net Investment', 'Total Gain/Loss'],
-                'datasets' => [
-                    [
-                        'data' => [86.28, 13.72],
-                        'backgroundColor' => ['#f2f2f2', '#4472c4'],
-                        'borderColor' => '#4472c4',
-                    ]
-                ]
-            ],
-            'options' => [
-                'cutout' => '50%',
-                'plugins' => [
-                    'legend' => ['display' => false],
-                    'datalabels' => [
-                        'display' => true,
-                        'color' => 'black',
-                        'anchor' => 'end',
-                        'align' => 'start',
-                        'offset' => 20,
-                        'font' => ['size' => 10],
-                        'formatter' => "function(val, ctx){ return ctx.chart.data.labels[ctx.dataIndex] + '\\n' + val + '%'; }"
-                    ]
-                ]
-            ]
-        ];
+        $url2 = 'https://quickchart.io/chart?v=2&width=400&height=400&c=' . urlencode(json_encode($chart2));
 
         // CHART 3: Pie (Liquidity)
         $chart3 = [
@@ -275,7 +279,7 @@ class PdfController extends Controller
                 'datasets' => [
                     [
                         'data' => [45146, 780625],
-                        'backgroundColor' => ['#ed7d31', '#4472c4'],
+                        'backgroundColor' => ['#9CA3AF', '#FF0000'],
                         'borderColor' => '#ffffff',
                         'borderWidth' => 2
                     ]
@@ -286,8 +290,56 @@ class PdfController extends Controller
                     'legend' => ['display' => false],
                     'datalabels' => [
                         'color' => 'white',
-                        'font' => ['weight' => 'bold', 'size' => 10],
+                        'font' => ['weight' => 'bold', 'size' => 14],
                         'formatter' => "function(val, ctx){ var lbl = ctx.chart.data.labels[ctx.dataIndex]; var perc = Math.round(val / (45146+780625) * 100); return lbl + '\\n£ ' + val.toLocaleString() + ' , ' + perc + '%'; }"
+                    ]
+                ]
+            ]
+        ];
+
+        // CHART 4: Bar (Relative Performance Context)
+        $chart4 = [
+            'type' => 'bar',
+            'data' => [
+                'labels' => ['Blackstone Motors', 'FTSE 100', 'Gilts (UK Govt. bonds)', 'Savings/ Bank Deposits', 'Buy to let property'],
+                'datasets' => [
+                    [
+                        'data' => [8.10, 8.36, 4.70, 4.30, 5.00],
+                        'backgroundColor' => '#9CA3AF',
+                        'barPercentage' => 0.5,
+                        'categoryPercentage' => 0.5,
+                        'datalabels' => [
+                            'display' => true,
+                            'anchor' => 'end',
+                            'align' => 'top',
+                            'color' => '#000',
+                            'font' => ['weight' => 'bold'],
+                            'formatter' => "function(val){return val.toFixed(2) + '%';}"
+                        ]
+                    ]
+                ]
+            ],
+            'options' => [
+                'plugins' => [
+                    'legend' => ['display' => false],
+                    'datalabels' => ['display' => true]
+                ],
+                'scales' => [
+                    'y' => [
+                        'stacked' => true,
+                        'position' => 'left',
+                        'title' => ['display' => false],
+                        'ticks' => [
+                            'stepSize' => 2,
+                            'format' => [
+                                'style' => 'percent',
+                                'minimumFractionDigits' => 0,
+                                'maximumFractionDigits' => 0,
+                            ],
+                        ],
+                    ],
+                    'x' => [
+                        'grid' => ['display' => true]
                     ]
                 ]
             ]
@@ -295,25 +347,19 @@ class PdfController extends Controller
 
         // Helper to get URL
         $getChartUrl = function ($config) {
-            return 'https://quickchart.io/chart?v=3&width=500&height=300&c=' . urlencode(json_encode($config));
+            return 'https://quickchart.io/chart?v=3&width=500&height=500&c=' . urlencode(json_encode($config));
         };
 
         // Specific sizes for layout
-        $url1 = 'https://quickchart.io/chart?v=3&width=600&height=350&c=' . urlencode(json_encode($chart1));
-        // Center text plugin for chart 2 manual injection if needed, but let's try just the chart first.
-        // Actually for Chart 2, let's use the 'doughnutlabel' plugin if Quickchart supports it, otherwise plain.
-        // QuickChart default supports 'outlabels' plugin which is nice for pie/doughnut.
-        $chart2['options']['plugins']['outlabels'] = ['text' => "%l\n%p", 'color' => 'black', 'stretch' => 30, 'font' => ['resizable' => true, 'minSize' => 12, 'maxSize' => 18]];
-        $chart2['options']['plugins']['datalabels']['display'] = false; // Disable standard datalabels if using outlabels
-        $chart2['options']['layout']['padding'] = 40;
-
-        $url2 = 'https://quickchart.io/chart?v=3&width=300&height=300&c=' . urlencode(json_encode($chart2));
-
-        $url3 = 'https://quickchart.io/chart?v=3&width=300&height=300&c=' . urlencode(json_encode($chart3));
+        $url1 = 'https://quickchart.io/chart?v=3&width=600&height=300&c=' . urlencode(json_encode($chart1));
+        $url2 = 'https://quickchart.io/chart?v=2&width=400&height=400&c=' . urlencode(json_encode($chart2));
+        $url3 = 'https://quickchart.io/chart?v=3&width=400&height=400&c=' . urlencode(json_encode($chart3));
+        $url4 = 'https://quickchart.io/chart?v=3&width=500&height=300&c=' . urlencode(json_encode($chart4));
 
         $imagePath1 = public_path('charts/chart_combo.png');
         $imagePath2 = public_path('charts/chart_doughnut.png');
         $imagePath3 = public_path('charts/chart_pie.png');
+        $imagePath4 = public_path('charts/chart_relative.png');
 
         if (!is_dir(public_path('charts'))) {
             mkdir(public_path('charts'), 0755, true);
@@ -322,13 +368,16 @@ class PdfController extends Controller
         file_put_contents($imagePath1, file_get_contents($url1));
         file_put_contents($imagePath2, file_get_contents($url2));
         file_put_contents($imagePath3, file_get_contents($url3));
+        file_put_contents($imagePath4, file_get_contents($url4));
 
         $pdf = Pdf::loadView('pdf.black-stone', [
             'chart1' => $imagePath1,
             'chart2' => $imagePath2,
             'chart3' => $imagePath3,
-        ])->setPaper('letter', 'landscape');
+            'chart4' => $imagePath4,
+        ])->setPaper('letter', 'landscape')
+            ->setOption('isPhpEnabled', true);
 
-        return $pdf->stream('np-black-stone.pdf');
+        return $pdf->stream('investment.pdf');
     }
 }
