@@ -14,11 +14,6 @@
     <title>Investment Pdf</title>
 </head>
 <style>
-    @font-face{
-        font-family: 'Inter';
-        font-weight: 400;
-        src: url('{{ public_path('assets/fonts/inter_bold_493cf4c16bcf1cb38752670e5ef23a81.ttf') }}');
-    }
     @page {
         margin: 0;
         padding: 0;
@@ -89,7 +84,7 @@
     .report-subtitle {
         width: 70%;
         border-radius: 50px;
-        font-size: 20px;
+        font-size: 32px;
         color: #FF0000;
         background: rgba(0, 0, 0, 1);
         padding: 20px;
@@ -228,36 +223,65 @@
             <h3 style="font-size: 14px; text-align: right; margin:0; color: #9CA3AF;">Page Number</h3>
 
             <table style="width: 100%; border-collapse: separate; border-spacing: 0 20px; font-size: 10px;">
-                <tr style="background-color: #e5e7eb; font-weight: bold; height: 30px;">
+                <tr style="padding: 10px 10px; background-color: #e5e7eb; font-weight: bold; height: 30px;">
                     <td>EXECUTIVE SUMMARY - INVESTMENT SNAPSHOT</td>
+                    <td style="text-align: right; padding-right:30px;">2</td>
+                </tr>
+                <tr style="padding: 10px 10px; background-color: #e5e7eb; font-weight: bold; height: 30px;">
+                    <td>SEMI-ANNUAL INVESTMENT PERFORMANCE TABLE (NP)</td>
                     <td style="text-align: right; padding-right:30px;">3</td>
                 </tr>
-                <tr style="background-color: #e5e7eb; font-weight: bold; height: 30px;">
-                    <td>SEMI-ANNUAL INVESTMENT PERFORMANCE TABLE (NP)</td>
-                    <td style="text-align: right; padding-right:30px;">4</td>
-                </tr>
-                <tr style="background-color: #e5e7eb; font-weight: bold; height: 30px;">
+                <tr style="padding: 10px 10px; background-color: #e5e7eb; font-weight: bold; height: 30px;">
                     <td>RELATIVE PERFORMANCE CONTEXT</td>
                     <td style="text-align: right; padding-right:30px;">4</td>
                 </tr>
-                <tr style="background-color: #e5e7eb; font-weight: bold; height: 30px;">
+                <tr style="padding: 10px 10px; background-color: #e5e7eb; font-weight: bold; height: 30px;">
                     <td>APPENDIX A LIST OF VEHICLES SOLD - VEHICLE TRANSACTIONS - (FROM 14 Feb 2024 TO 12 Dec 2025)</td>
                     <td style="text-align: right; padding-right:30px;">5</td>
                 </tr>
-                <tr style="background-color: #e5e7eb; font-weight: bold; height: 30px;">
+                <tr style="padding: 10px 10px; background-color: #e5e7eb; font-weight: bold; height: 30px;">
                     <td>APPENDIX B LIST OF VEHICLES 'IN STOCK' AS OF 12th DECEMBER 2025</td>
                     <td style="text-align: right; padding-right:30px;">6</td>
                 </tr>
-                <tr style="background-color: #e5e7eb; font-weight: bold; height: 30px;">
+                <tr style="padding: 10px 10px; background-color: #e5e7eb; font-weight: bold; height: 30px;">
                     <td>APPENDIX C INVESTMENT BREAK-UP OF AMOUNTS - FROM 14 Feb 2024 TO 12 Dec 2025</td>
-                    <td style="text-align: right; padding-right:30px;">6</td>
+                    <td style="text-align: right; padding-right:30px;">7</td>
                 </tr>
             </table>
 
         </div>
+    </div>
+
+
+    <!-- Page 3 -->
+    <div class="next-page" style="padding:0 50px;">
+        <!-- TOP -->
+        <table style="width: 100%; border-collapse: collapse; font-size: 10px;">
+            <tr>
+                <td style="width: 33.33%; text-align: left;">
+                    BLACKSTONE MOTORS LIMITED
+                </td>
+
+                <td style="width: 33.33%; text-align: center;">
+                    INVESTOR'S REPORT
+                </td>
+
+                <td style="width: 33.33%; text-align: right;">
+                    DEC25
+                </td>
+            </tr>
+        </table>
+
+        <div class="report-block" style="margin-top: 50px;">
+            <h2>BLACKSTONE MOTORS LIMITED</h2>
+            <h3>Investment Performance Report</h3>
+            <h4>Investor: <span>Neil Partridge</span></h4>
+            <h4>Period of this report:
+                <span>from 14 Feb 2024 to 12 Dec 2025</span>
+            </h4>
+        </div>
         <h2 style="background-color: lightgray; text-align: center; font-size: 14px;">EXECUTIVE SUMMARY - INVESTMENT
             SNAPSHOT</h2>
-
 
         <div style="margin-top: 20px;">
             <table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
@@ -276,13 +300,11 @@
                     <td style="width: 21%; vertical-align: top; text-align: center; padding-left: 5px;">
                         <h4 style="margin: 0 0 10px 0; font-size: 12px;">Liquidity Snapshot</h4>
                         <img src="data:image/png;base64,{{ base64_encode(file_get_contents($chart3)) }}"
-                            style="width: 100%; height: auto;" alt="Liquidity Snapshot">
+                            style="width: 100%; height: auto; margin-top: 27px;" alt="Liquidity Snapshot">
                     </td>
                 </tr>
             </table>
         </div>
-
-
 
 
         <table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 10px; margin-top: 20px;">
@@ -357,7 +379,6 @@
         </table>
 
 
-
         <p style="font-size: 11px; margin-top: 10px;">As at 12 December 2025, the investment with Blackstone Motors has
             delivered a solid,
             asset-backed performance
@@ -379,8 +400,7 @@
             tangible, tradeable assets, rather than financial instruments exposed to market volatility.</p>
     </div>
 
-
-    <!-- Page 3 -->
+    <!-- Page 4 -->
     <div class="next-page" style="padding:0 50px;">
         <!-- TOP -->
         <table style="width: 100%; border-collapse: collapse; font-size: 10px;">
@@ -399,7 +419,7 @@
             </tr>
         </table>
 
-        <div class="report-block" style="margin-top: 50px;">
+        <div class="report-block" style="margin-top: 20px;">
             <h2>BLACKSTONE MOTORS LIMITED</h2>
             <h3>Investment Performance Report</h3>
             <h4>Investor: <span>Neil Partridge</span></h4>
@@ -409,13 +429,11 @@
         </div>
 
 
-        <h6 style="padding: 0; margin:0; margin-top: 40px;">
+        <h6 style="padding: 0; margin:0; margin-top: 20px;">
             SEMI-ANNUAL INVESTMENT PERFORMANCE TABLE (NP)
         </h6>
 
         <table style="width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 10px; ">
-
-
 
             <tr style="background-color: #e5e7eb; text-align: center; font-weight: bold; height: 100px;">
                 <td
@@ -516,23 +534,23 @@
 
 
 
-        <p style="font-size: 11px; margin-top: 30px;">* Incase no reinvestment of the profit then <b>Cumulative ROI
+        <p style="font-size: 11px; margin-top: 10px;">* Incase no reinvestment of the profit then <b>Cumulative ROI
                 would be 15.59% (£111,642/ £715,897)</b>.</p>
-        <p style="font-size: 11px; margin-top: 30px;">The table above summarises semi-annual performance: Returns were
+        <p style="font-size: 11px; margin-top: 10px;">The table above summarises semi-annual performance: Returns were
             positive in every reporting period, Performance moderated during weaker market conditions in H1-FY25, Margin
             recovery and capital
             redeployment drove improved returns in H2-FY25, Partial H1-FY26 performance remains positive despite shorter
             duration, This pattern reflects a defensive return profile, where performance slows during adverse </p>
 
 
-        <h6 style="padding: 0; margin:0; margin-top: 40px;">
+        <h6 style="padding: 0; margin:0; margin-top: 10px;">
             RELATIVE PERFORMANCE CONTEXT
         </h6>
 
 
-        <table style="width: 100%; table-layout: fixed; border-collapse: collapse; margin-top: 10px;">
+        <table style="width: 90%; table-layout: fixed; border-collapse: collapse; margin-top: 10px;">
             <tr>
-                <td style="width: 60%; vertical-align: middle;">
+                <td style="width: 50%; vertical-align: middle;">
                     <h6 style="padding: 0; margin:0; text-align:center;">
                         CAGR
                     </h6>
@@ -541,7 +559,7 @@
                             style="width: 100%; max-width: 600px; height: auto;" alt="Relative Performance">
                     </div>
                 </td>
-                <td style="width: 40%; padding-left: 20px; font-size: 14px; color: black;">
+                <td style="width: 40%; padding-left: 20px; font-size: 12px; color: black;">
                     The achieved <b>8.11% annualised return</b> (same period) compares favourably with UK savings and
                     money-market instruments, UK government bonds (gilts) and Net yields from residential buy-to-let
                     property.
@@ -551,32 +569,21 @@
                 </td>
             </tr>
         </table>
+
         <p style="font-size:11px; margin: 0; padding:0; margin-top:20px;">Source:</p>
 
-        <a style="font-size:11px; display: block; " href="https://black-stone-management.com" target="_blank">
+        <a style="font-size:11px; display: block;" href="https://black-stone-management.com" target="_blank">
             Black Stone Management
         </a>
-        <a style="font-size:11px; display: block; " href="https://black-stone-management.com" target="_blank">
+        <a style="font-size:11px; display: block;" href="https://black-stone-management.com" target="_blank">
             Black Stone Management
         </a>
-        <a style="font-size:11px; display: block; " href="https://black-stone-management.com" target="_blank">
+        <a style="font-size:11px; display: block;" href="https://black-stone-management.com" target="_blank">
             Black Stone Management
         </a>
-        <a style="font-size:11px; display: block; " href="https://black-stone-management.com" target="_blank">
-            Black Stone Management
-        </a>
-        <a style="font-size:11px; display: block; " href="https://black-stone-management.com" target="_blank">
-            Black Stone Management
-        </a>
-        <a style="font-size:11px; display: block; " href="https://black-stone-management.com" target="_blank">
-            Black Stone Management
-        </a>
-
-
     </div>
 
-
-    <!-- Page 4 -->
+    <!-- Page 5 -->
     <div class="next-page" style="padding:0 50px;">
         <!-- TOP -->
         <table style="width: 100%; border-collapse: collapse; font-size: 10px;">
@@ -595,7 +602,7 @@
             </tr>
         </table>
 
-        <div class="report-block" style="margin-top: 50px;">
+        <div class="report-block" style="margin-top: 30px;">
             <h2>BLACKSTONE MOTORS LIMITED</h2>
             <h3>Investment Performance Report</h3>
             <h4>Investor: <span>Neil Partridge</span></h4>
@@ -624,236 +631,7 @@
                 <th style="padding:10px;">NP profit</th>
                 <th style="padding:10px; width: 20%;">Make/Model</th>
             </tr>
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
 
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-           
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-           
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #fff; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
-            <tr style="background-color: #e5e7eb; text-align:center;">
-                <td>14 Feb 2024</td>
-                <td> RX22 ZTK</td>
-                <td>100,508 537
-
-                </td>
-                <td> 100,508 </td>
-                <td> 508 </td>
-                <td>101,045</td>
-                <td>104,00</td>
-                <td>1,478 </td>
-                <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
-            </tr>
             <tr style="background-color: #fff; text-align:center;">
                 <td>14 Feb 2024</td>
                 <td> RX22 ZTK</td>
@@ -1164,7 +942,7 @@
     </div>
 
 
-    <!-- Page 5 -->
+    <!-- Page 6 -->
     <div class="next-page" style="padding:0 50px;">
 
         <!-- TOP -->
@@ -1218,7 +996,167 @@
             </tr>
 
 
-          
+
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #e5e7eb; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>100,508 537</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
+            <tr style="background-color: #fff; text-align:center;">
+                <td>14 Feb 2024</td>
+                <td> KE71 NZW</td>
+                <td>2,174</td>
+                <td>192,17</td>
+                <td>100,508 537</td>
+                <td style="width: 20%; text-align: left;">OLLS ROYCE Ghost V12 4x4 Aut</td>
+            </tr>
             <tr style="background-color: #e5e7eb; text-align:center;">
                 <td>14 Feb 2024</td>
                 <td> KE71 NZW</td>
@@ -1262,8 +1200,40 @@
             </tr>
 
         </table>
+    </div>
 
-        <p style="font-size: 11px; margin-top: 50px;">*Additional cost incurred as part of vehicle cost.</p>
+
+    <!-- Page  -->
+    <div class="next-page" style="padding:0 50px;">
+
+        <!-- TOP -->
+        <table style="width: 100%; border-collapse: collapse; font-size: 10px;">
+            <tr>
+                <td style="width: 33.33%; text-align: left;">
+                    BLACKSTONE MOTORS LIMITED
+                </td>
+
+                <td style="width: 33.33%; text-align: center;">
+                    INVESTOR'S REPORT
+                </td>
+
+                <td style="width: 33.33%; text-align: right;">
+                    DEC25
+                </td>
+            </tr>
+        </table>
+
+        <div class="report-block" style="margin-top: 50px;">
+            <h2>BLACKSTONE MOTORS LIMITED</h2>
+            <h3>Investment Performance Report</h3>
+            <h4>Investor: <span>Neil Partridge</span></h4>
+            <h4>Period of this report:
+                <span>from 14 Feb 2024 to 12 Dec 2025</span>
+            </h4>
+        </div>
+
+
+        <p style="font-size: 11px; margin-top: 30px;">*Additional cost incurred as part of vehicle cost.</p>
 
         <h2
             style="background-color: #9CA3AF; color: white; text-align: center; font-size: 14px; margin-top: 10px;margin-bottom: 10px;">
@@ -1545,8 +1515,8 @@
 
     <script type="text/php">
         if ( isset($pdf) ) {
-            $x = 480;
-            $y = 810;
+            $x = 750;
+            $y = 580;
             $text = "Page {PAGE_NUM} of {PAGE_COUNT}";
             $font = $fontMetrics->get_font("helvetica", "bold");
             $size = 7;

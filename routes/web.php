@@ -7,6 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/vehicle-checklist-pdf', [PdfController::class, 'generate']);
-Route::get('/black-stone', [PdfController::class, 'blackstonepdf']);
-Route::get('/black-stone-a4', [PdfController::class, 'investment']);
+Route::get('/vehicle-checklist-pdf', [PdfController::class, 'vehicleChecklist']);
+Route::get('/investment-letter', [PdfController::class, 'investmentLetter']);
+Route::get('/investment-a4', [PdfController::class, 'investmentLetterA4']);

@@ -14,11 +14,6 @@
     <title>Investment Pdf</title>
 </head>
 <style>
-    @font-face{
-        font-family: 'Inter';
-        font-weight: 400;
-        src: url('{{ public_path('assets/fonts/inter_bold_493cf4c16bcf1cb38752670e5ef23a81.ttf') }}');
-    }
     @page {
         margin: 0;
         padding: 0;
@@ -269,14 +264,14 @@
                         </div>
                     </td>
                     <td style="width: 21%; vertical-align: top; text-align: center; padding: 0 5px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 12px;">Total Investment vs Profit</h4>
+                        <h4 style="margin: 0 0 10px 0; font-size: 10px;">Total Investment vs Profit</h4>
                         <img src="data:image/png;base64,{{ base64_encode(file_get_contents($chart2)) }}"
                             style="width: 100%; height: auto;" alt="Investment vs Profit">
                     </td>
                     <td style="width: 21%; vertical-align: top; text-align: center; padding-left: 5px;">
-                        <h4 style="margin: 0 0 10px 0; font-size: 12px;">Liquidity Snapshot</h4>
+                        <h4 style="margin: 0 0 10px 0; font-size: 10px;">Liquidity Snapshot</h4>
                         <img src="data:image/png;base64,{{ base64_encode(file_get_contents($chart3)) }}"
-                            style="width: 100%; height: auto;" alt="Liquidity Snapshot">
+                            style="width: 70%; height: auto; margin-top: 20px;" alt="Liquidity Snapshot">
                     </td>
                 </tr>
             </table>
@@ -637,7 +632,7 @@
                 <td>1,478 </td>
                 <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
             </tr>
-           
+
             <tr style="background-color: #e5e7eb; text-align:center;">
                 <td>14 Feb 2024</td>
                 <td> RX22 ZTK</td>
@@ -651,7 +646,7 @@
                 <td>1,478 </td>
                 <td style="width: 20%; text-align: left;">Porsche 911 Carrera GTS</td>
             </tr>
-           
+
 
             <tr style="background-color: #e5e7eb; text-align:center;">
                 <td>14 Feb 2024</td>
@@ -1163,7 +1158,6 @@
 
     </div>
 
-
     <!-- Page 5 -->
     <div class="next-page" style="padding:0 50px;">
 
@@ -1218,7 +1212,7 @@
             </tr>
 
 
-          
+
             <tr style="background-color: #e5e7eb; text-align:center;">
                 <td>14 Feb 2024</td>
                 <td> KE71 NZW</td>
@@ -1545,8 +1539,8 @@
 
     <script type="text/php">
         if ( isset($pdf) ) {
-            $x = 480;
-            $y = 810;
+            $x = 520;
+            $y = 820;
             $text = "Page {PAGE_NUM} of {PAGE_COUNT}";
             $font = $fontMetrics->get_font("helvetica", "bold");
             $size = 7;

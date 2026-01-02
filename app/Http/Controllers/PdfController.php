@@ -8,7 +8,7 @@ use QuickChart;
 
 class PdfController extends Controller
 {
-    public function generate()
+    public function vehicleChecklist()
     {
         $pdf = Pdf::loadView('pdf.vehicle-checklist')
             ->setPaper('A4', 'portrait');
@@ -17,7 +17,7 @@ class PdfController extends Controller
     }
 
 
-    public function blackstonepdf()
+    public function investmentLetter()
     {
         // CHART 1: Combo Chart (Portfolio)
         $chartConfig1 = [
@@ -305,7 +305,7 @@ class PdfController extends Controller
                 'datasets' => [
                     [
                         'data' => [8.10, 8.36, 4.70, 4.30, 5.00],
-                        'backgroundColor' => '#9CA3AF',
+                        'backgroundColor' => '#FF0000',
                         'barPercentage' => 0.5,
                         'categoryPercentage' => 0.5,
                         'datalabels' => [
@@ -354,7 +354,7 @@ class PdfController extends Controller
         $url1 = 'https://quickchart.io/chart?v=3&width=600&height=250&c=' . urlencode(json_encode($chart1));
         $url2 = 'https://quickchart.io/chart?v=2&width=400&height=400&c=' . urlencode(json_encode($chart2));
         $url3 = 'https://quickchart.io/chart?v=3&width=400&height=300&c=' . urlencode(json_encode($chart3));
-        $url4 = 'https://quickchart.io/chart?v=3&width=500&height=300&c=' . urlencode(json_encode($chart4));
+        $url4 = 'https://quickchart.io/chart?v=3&width=400&height=200&c=' . urlencode(json_encode($chart4));
 
         $imagePath1 = public_path('charts/chart_combo.png');
         $imagePath2 = public_path('charts/chart_doughnut.png');
@@ -370,7 +370,7 @@ class PdfController extends Controller
         file_put_contents($imagePath3, file_get_contents($url3));
         file_put_contents($imagePath4, file_get_contents($url4));
 
-        $pdf = Pdf::loadView('pdf.black-stone', [
+        $pdf = Pdf::loadView('pdf.investment-letter', [
             'chart1' => $imagePath1,
             'chart2' => $imagePath2,
             'chart3' => $imagePath3,
@@ -382,7 +382,7 @@ class PdfController extends Controller
     }
 
 
-    public function investment()
+    public function investmentLetterA4()
     {
         // CHART 1: Combo Chart (Portfolio)
         $chartConfig1 = [
@@ -482,9 +482,9 @@ class PdfController extends Controller
             ],
         ];
 
-        // Prepare chart1 string formatter for json
         $chartConfig1Json = json_encode($chartConfig1);
 
+        // CHART 2:
         $chart1 = [
             'type' => 'bar',
             'data' => [
@@ -633,8 +633,6 @@ class PdfController extends Controller
                 ]
             ]
         ];
-
-        $url2 = 'https://quickchart.io/chart?v=2&width=400&height=400&c=' . urlencode(json_encode($chart2));
 
         // CHART 3: Pie (Liquidity)
         $chart3 = [
@@ -718,7 +716,7 @@ class PdfController extends Controller
         // Specific sizes for layout
         $url1 = 'https://quickchart.io/chart?v=3&width=600&height=300&c=' . urlencode(json_encode($chart1));
         $url2 = 'https://quickchart.io/chart?v=2&width=400&height=400&c=' . urlencode(json_encode($chart2));
-        $url3 = 'https://quickchart.io/chart?v=3&width=400&height=400&c=' . urlencode(json_encode($chart3));
+        $url3 = 'https://quickchart.io/chart?v=3&width=300&height=300&c=' . urlencode(json_encode($chart3));
         $url4 = 'https://quickchart.io/chart?v=3&width=500&height=300&c=' . urlencode(json_encode($chart4));
 
         $imagePath1 = public_path('charts/chart_combo.png');
@@ -735,7 +733,7 @@ class PdfController extends Controller
         file_put_contents($imagePath3, file_get_contents($url3));
         file_put_contents($imagePath4, file_get_contents($url4));
 
-        $pdf = Pdf::loadView('pdf.investment', [
+        $pdf = Pdf::loadView('pdf.investment-a4', [
             'chart1' => $imagePath1,
             'chart2' => $imagePath2,
             'chart3' => $imagePath3,
@@ -745,7 +743,4 @@ class PdfController extends Controller
 
         return $pdf->stream('investment.pdf');
     }
-
-
-
 }
