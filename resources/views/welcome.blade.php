@@ -19,6 +19,8 @@
     <h1>Visit /vehicle-checklist-pdf</h1>
     <h1>Visit /investment-letter (Letter Version)</h1>
     <h1>Visit /investment-letter-a4 (A4 Version)</h1>
+    <h1>Visit /black-stone-pdf</h1>
+    <h1>Visit /salesreciept-pdf</h1>
 </body>
 
 </html>
